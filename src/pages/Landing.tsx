@@ -190,7 +190,7 @@ export default function Landing() {
 
       {/* CTA Section */}
       <section className="container mx-auto px-4 py-16 mb-20">
-        <div className="glass-card p-10 rounded-3xl bg-gradient-to-br from-doit-purple/10 to-doit-blue/5 dark:from-doit-purple/20 dark:to-doit-blue/10">
+        <div className="glass-card p-10 rounded-3xl bg-gradient-to-br from-doit-purple/10 to-doit-blue/5 dark:from-doit-black/20 dark:to-doit-blue/10 bg-neutral-950">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to achieve your goals?</h2>
             <p className="text-lg mb-8 text-muted-foreground">
