@@ -130,7 +130,7 @@ export default function Landing() {
       <section className="container mx-auto px-4 py-16">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">How DoIT AI helps you succeed</h2>
         <div className="grid md:grid-cols-3 gap-10">
-          <motion.div className="glass-card p-6 rounded-xl flex flex-col items-center text-center" initial={{
+          <motion.div initial={{
           opacity: 0,
           y: 20
         }} whileInView={{
@@ -140,7 +140,7 @@ export default function Landing() {
           once: true
         }} transition={{
           duration: 0.5
-        }}>
+        }} className="glass-card p-6 rounded-xl flex flex-col items-center text-center bg-zinc-900">
             <div className="bg-gradient-primary p-4 rounded-full mb-6">
               <Brain className="h-8 w-8 text-white" />
             </div>
