@@ -148,7 +148,7 @@ export default function Landing() {
             <p className="text-muted-foreground">Personalized step-by-step plans tailored to your experience, time availability, and learning style.</p>
           </motion.div>
           
-          <motion.div className="glass-card p-6 rounded-xl flex flex-col items-center text-center" initial={{
+          <motion.div initial={{
           opacity: 0,
           y: 20
         }} whileInView={{
@@ -159,7 +159,7 @@ export default function Landing() {
         }} transition={{
           duration: 0.5,
           delay: 0.2
-        }}>
+        }} className="glass-card p-6 rounded-xl flex flex-col items-center text-center bg-zinc-900">
             <div className="bg-gradient-primary p-4 rounded-full mb-6">
               <Clock className="h-8 w-8 text-white" />
             </div>
