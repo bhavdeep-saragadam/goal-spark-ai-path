@@ -1,9 +1,8 @@
-
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Rocket, ArrowRight, Brain, Clock, Award } from "lucide-react";
+import { Rocket, ArrowRight, Brain, Clock, Award, Check, ChevronRight } from "lucide-react";
 
 export default function Landing() {
   const [isHovered, setIsHovered] = useState(false);
