@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Rocket, ArrowRight, Check, ChevronRight, Brain, Clock, Award } from "lucide-react";
+import { Rocket, ArrowRight, Brain, Clock, Award } from "lucide-react";
 
 export default function Landing() {
   const [isHovered, setIsHovered] = useState(false);
@@ -120,11 +120,11 @@ export default function Landing() {
       </section>
 
       {/* Features Section */}
-      <section className="container mx-auto px-4 py-16 bg-secondary/30 rounded-3xl my-16">
+      <section className="container mx-auto px-4 py-16">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">How DoIT AI helps you succeed</h2>
         <div className="grid md:grid-cols-3 gap-10">
           <motion.div 
-            className="flex flex-col items-center text-center"
+            className="glass-card p-6 rounded-xl flex flex-col items-center text-center"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -133,12 +133,12 @@ export default function Landing() {
             <div className="bg-gradient-primary p-4 rounded-full mb-6">
               <Brain className="h-8 w-8 text-white" />
             </div>
-            <h3 className="text-xl font-semibold mb-3">AI-Powered Roadmaps</h3>
+            <h3 className="text-xl font-semibold mb-3 text-foreground">AI-Powered Roadmaps</h3>
             <p className="text-muted-foreground">Personalized step-by-step plans tailored to your experience, time availability, and learning style.</p>
           </motion.div>
           
           <motion.div 
-            className="flex flex-col items-center text-center"
+            className="glass-card p-6 rounded-xl flex flex-col items-center text-center"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -147,12 +147,12 @@ export default function Landing() {
             <div className="bg-gradient-primary p-4 rounded-full mb-6">
               <Clock className="h-8 w-8 text-white" />
             </div>
-            <h3 className="text-xl font-semibold mb-3">Progress Tracking</h3>
+            <h3 className="text-xl font-semibold mb-3 text-foreground">Progress Tracking</h3>
             <p className="text-muted-foreground">Monitor your achievements, celebrate milestones, and stay accountable with smart reminders.</p>
           </motion.div>
           
           <motion.div 
-            className="flex flex-col items-center text-center"
+            className="glass-card p-6 rounded-xl flex flex-col items-center text-center"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -161,7 +161,7 @@ export default function Landing() {
             <div className="bg-gradient-primary p-4 rounded-full mb-6">
               <Award className="h-8 w-8 text-white" />
             </div>
-            <h3 className="text-xl font-semibold mb-3">Gamified Experience</h3>
+            <h3 className="text-xl font-semibold mb-3 text-foreground">Gamified Experience</h3>
             <p className="text-muted-foreground">Earn badges, unlock achievements, and build streaks that keep you motivated throughout your journey.</p>
           </motion.div>
         </div>
