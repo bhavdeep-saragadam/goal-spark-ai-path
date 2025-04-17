@@ -3,12 +3,9 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Rocket, ArrowRight, Brain, Clock, Award, Check, ChevronRight } from "lucide-react";
-
 export default function Landing() {
   const [isHovered, setIsHovered] = useState(false);
-  
-  return (
-    <div className="min-h-screen bg-background text-foreground">
+  return <div className="min-h-screen bg-background text-foreground">
       {/* Header/Navigation */}
       <header className="container mx-auto flex justify-between items-center py-6 px-4">
         <div className="flex items-center">
@@ -29,40 +26,48 @@ export default function Landing() {
       <section className="container mx-auto px-4 py-16 md:py-24">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-10 md:mb-0">
-            <motion.h1 
-              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
+            <motion.h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" initial={{
+            opacity: 0,
+            y: 20
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.6
+          }}>
               Dream it. <span className="gradient-text">Do it.</span>
             </motion.h1>
-            <motion.p 
-              className="text-xl mb-8 text-muted-foreground"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
+            <motion.p className="text-xl mb-8 text-muted-foreground" initial={{
+            opacity: 0,
+            y: 20
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.6,
+            delay: 0.2
+          }}>
               Let DoIT AI create personalized roadmaps for any goal you want to achieve.
               From starting a podcast to training for a marathon, we'll guide you every step of the way.
             </motion.p>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.6,
+            delay: 0.4
+          }}>
               <Link to="/login">
-                <Button 
-                  size="lg" 
-                  className="mr-4"
-                  onMouseEnter={() => setIsHovered(true)}
-                  onMouseLeave={() => setIsHovered(false)}
-                >
+                <Button size="lg" className="mr-4" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
                   Start Crushing Goals
-                  <motion.div
-                    animate={{ x: isHovered ? 5 : 0 }}
-                    transition={{ duration: 0.2 }}
-                  >
+                  <motion.div animate={{
+                  x: isHovered ? 5 : 0
+                }} transition={{
+                  duration: 0.2
+                }}>
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </motion.div>
                 </Button>
@@ -70,13 +75,16 @@ export default function Landing() {
             </motion.div>
           </div>
           <div className="md:w-1/2 relative">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8 }}
-              className="relative"
-            >
-              <div className="glass-card p-6 rounded-xl overflow-hidden">
+            <motion.div initial={{
+            opacity: 0,
+            scale: 0.8
+          }} animate={{
+            opacity: 1,
+            scale: 1
+          }} transition={{
+            duration: 0.8
+          }} className="relative">
+              <div className="glass-card p-6 rounded-xl overflow-hidden bg-zinc-900">
                 <div className="bg-doit-purple/10 dark:bg-doit-purple/20 p-4 rounded-lg mb-4">
                   <h3 className="font-medium mb-2">I want to start a podcast</h3>
                   <div className="flex gap-2">
@@ -122,13 +130,17 @@ export default function Landing() {
       <section className="container mx-auto px-4 py-16">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">How DoIT AI helps you succeed</h2>
         <div className="grid md:grid-cols-3 gap-10">
-          <motion.div 
-            className="glass-card p-6 rounded-xl flex flex-col items-center text-center"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
+          <motion.div className="glass-card p-6 rounded-xl flex flex-col items-center text-center" initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} viewport={{
+          once: true
+        }} transition={{
+          duration: 0.5
+        }}>
             <div className="bg-gradient-primary p-4 rounded-full mb-6">
               <Brain className="h-8 w-8 text-white" />
             </div>
@@ -136,13 +148,18 @@ export default function Landing() {
             <p className="text-muted-foreground">Personalized step-by-step plans tailored to your experience, time availability, and learning style.</p>
           </motion.div>
           
-          <motion.div 
-            className="glass-card p-6 rounded-xl flex flex-col items-center text-center"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
+          <motion.div className="glass-card p-6 rounded-xl flex flex-col items-center text-center" initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} viewport={{
+          once: true
+        }} transition={{
+          duration: 0.5,
+          delay: 0.2
+        }}>
             <div className="bg-gradient-primary p-4 rounded-full mb-6">
               <Clock className="h-8 w-8 text-white" />
             </div>
@@ -150,13 +167,18 @@ export default function Landing() {
             <p className="text-muted-foreground">Monitor your achievements, celebrate milestones, and stay accountable with smart reminders.</p>
           </motion.div>
           
-          <motion.div 
-            className="glass-card p-6 rounded-xl flex flex-col items-center text-center"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-          >
+          <motion.div className="glass-card p-6 rounded-xl flex flex-col items-center text-center" initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} viewport={{
+          once: true
+        }} transition={{
+          duration: 0.5,
+          delay: 0.4
+        }}>
             <div className="bg-gradient-primary p-4 rounded-full mb-6">
               <Award className="h-8 w-8 text-white" />
             </div>
@@ -196,6 +218,5 @@ export default function Landing() {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 }
