@@ -1,9 +1,6 @@
-
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ThemeToggle } from "@/components/theme-toggle";
 import { Rocket, ArrowRight, Check, ChevronRight, Brain, Clock, Award } from "lucide-react";
 
 export default function Landing() {
@@ -18,7 +15,6 @@ export default function Landing() {
           <h1 className="text-xl font-bold gradient-text">DoIT AI</h1>
         </div>
         <div className="flex items-center gap-4">
-          <ThemeToggle />
           <Link to="/login">
             <Button variant="outline" size="sm">Login</Button>
           </Link>

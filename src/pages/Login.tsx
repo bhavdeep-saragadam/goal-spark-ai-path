@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -6,29 +5,24 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Rocket, ArrowLeft } from "lucide-react";
-import { ThemeToggle } from "@/components/theme-toggle";
+import { Rocket, ArrowLeft, ChevronRight } from "lucide-react";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-  // This is a placeholder function - will need to be replaced with actual Supabase auth
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    // Simulate loading
     setTimeout(() => {
       setIsLoading(false);
       alert("Authentication requires Supabase integration. Please connect Supabase to enable login functionality.");
     }, 1500);
   };
 
-  // This is a placeholder function - will need to be replaced with actual Google Auth
   const handleGoogleLogin = () => {
     setIsLoading(true);
-    // Simulate loading
     setTimeout(() => {
       setIsLoading(false);
       alert("Google Authentication requires Supabase integration. Please connect Supabase to enable login functionality.");
@@ -37,13 +31,11 @@ export default function Login() {
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
-      {/* Header */}
       <header className="container mx-auto flex justify-between items-center p-4">
         <Link to="/" className="flex items-center">
           <ArrowLeft className="h-5 w-5 mr-2" />
           <span>Back to Home</span>
         </Link>
-        <ThemeToggle />
       </header>
 
       <div className="flex-1 flex items-center justify-center p-4">
